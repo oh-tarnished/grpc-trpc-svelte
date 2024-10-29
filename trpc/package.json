@@ -1,0 +1,26 @@
+{
+  "name": "trpc",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "ts-proto": "^2.2.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.2",
+    "@grpc/proto-loader": "^0.7.13",
+    "@trpc/client": "^10.45.2",
+    "@trpc/server": "^10.45.2",
+    "@types/node": "^22.8.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "ts-node": "^10.9.2",
+    "zod": "^3.23.8"
+  }
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "path/to/your/proto";
+
+// Define the service
+service StateService {
+  // Unary RPC
+  rpc GetStateInfo(StateRequest) returns (StateResponse);
+
+  // Server-Side Streaming RPC
+  rpc GetStateUpdates(StateRequest) returns (stream StateUpdate);
+
+  // Client-Side Streaming RPC
+  rpc UpdateState(stream StateRequest) returns (StateResponse);
+
+  // Bidirectional Streaming RPC
+  rpc Chat(stream StateRequest) returns (stream StateUpdate);
+}
+
+// Define request and response messages
+message StateRequest { string state_name = 1; }
+
+message StateResponse { string message = 1; }
+
+message StateUpdate { string update_info = 1; }
