@@ -1,5 +1,5 @@
 import { createTRPCProxyClient, httpBatchLink } from '@trpc/client';
-import type { AppRouter } from '../../../trpc/router';
+import type { AppRouter } from '../../trpc/router';
 import { createWSClient, wsLink } from '@trpc/client/links/wsLink';
 
 const wsClient = createWSClient({

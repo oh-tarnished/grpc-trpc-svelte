@@ -1,5 +1,5 @@
 <script lang="ts">
-  import trpc from "./lib/trpc/client";
+  import trpc from "./trpc/client";
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
 

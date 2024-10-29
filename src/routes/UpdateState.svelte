@@ -1,5 +1,5 @@
 <script lang="ts">
-  import trpc from "../lib/trpc/client";
+  import trpc from "../trpc/client";
   import { writable } from "svelte/store";
 
   const updateResult = writable<string>("");

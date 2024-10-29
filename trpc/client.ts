@@ -66,4 +66,3 @@ export function chat(messages: string[]): grpc.ClientDuplexStream<StateRequest, 
     return stream;
 }
 
-// gRPC server (go) -> gRPC client(node-ts) - tRPC server(node-ts) -> tRPC client(svelte)
