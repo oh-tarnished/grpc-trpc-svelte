@@ -2,6 +2,30 @@
 
  This project demonstrates a full-stack setup using gRPC as the backend service with a tRPC server acting as a bridge to expose gRPC methods to a Svelte frontend.
 
+
+```mermaid
+graph LR
+    subgraph Go_Server
+        A[gRPC Server - Engine]
+    end
+
+    subgraph Node_Server
+        B[gRPC Client - Node-TS]
+        C[tRPC Server - Node-TS]
+    end
+
+    subgraph Svelte_Frontend
+        D[tRPC Client - Svelte]
+    end
+
+    A -->|gRPC| B
+    B -->|tRPC| C
+    C -->|tRPC over HTTP/WebSocket| D
+
+
+ ```
+ 
+
  ## Overview
 
  **Architecture:**
